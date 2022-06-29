@@ -1,8 +1,11 @@
-﻿//
-// see also... https://pcl.readthedocs.io/projects/tutorials/en/master/kdtree_search.html#kdtree-search
-//
-#pragma warning(disable: 4819)
+# PCLTest01
+KdTreeFLANN::nearestKSearch()のベンチマークテスト。
 
+100万点の中から指定した地点から近い順に100個の点を抽出するのにどのぐらい時間がかかるかを調べる。
+
+  * ![](img01.png)
+
+```
 #include <pcl/point_cloud.h>
 #include <pcl/kdtree/kdtree_flann.h>
 
@@ -73,3 +76,4 @@ int main(int argc, char ** argv[])
 
     return 0;
 }
+```
