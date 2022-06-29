@@ -3,7 +3,14 @@ KdTreeFLANN::nearestKSearch()のベンチマークテスト。
 
 100万点の中から指定した地点から近い順に100個の点を抽出するのにどのぐらい時間がかかるかを調べる。
 
+#### 実行結果
+
   * ![](img01.png)
+
+#### メモ
+  - KdTreeを作る処理は0.5秒ぐらい
+  - KdTreeFLANN::nearestKSearch()を1万回繰り返してトータル0.2秒ぐらい
+      - 1回のKdTreeFLANN::nearestKSearch()の呼び出しは、1ミリ秒もかかっていない感じ？
 
 ```
 #include <pcl/point_cloud.h>
@@ -17,7 +24,6 @@ KdTreeFLANN::nearestKSearch()のベンチマークテスト。
 
 int main(int argc, char ** argv[])
 {
-
     boost::timer::cpu_timer timer1;
 
     timer1.start();
